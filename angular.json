@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "tvseriesangular"
+  "defaultProject": "tvseriesangular",
+  "cli": {
+    "analytics": "d259f8c0-c7c8-4c33-8064-636d178cdd09"
+  }
 }

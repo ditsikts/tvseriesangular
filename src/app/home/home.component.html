@@ -1,7 +1,12 @@
 <mat-form-field floatLabel="never">
   <mat-label>Search</mat-label>
-  <input matInput type="text" [(ngModel)]="value" (change)="searchChanged($event)">
-  <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-    <mat-icon>close</mat-icon>
+  <input matInput type="text" [(ngModel)]="searchQuery" (keyup.enter)="searchChanged($event)">
+  <button mat-button *ngIf="searchQuery" matSuffix mat-icon-button aria-label="Clear" (click)="searchQuery=''">
+    <mat-icon inline=true>close</mat-icon>
   </button>
 </mat-form-field>
+<mat-chip-list aria-label="Fish selection">
+
+  <mat-chip  *ngFor="let category of categoriesCountMap | keyvalue" color="primary" selected>{{ category.key }} ({{ category.value}})</mat-chip>
+
+</mat-chip-list>
