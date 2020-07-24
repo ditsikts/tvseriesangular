@@ -10,10 +10,17 @@ import { distinctCategoriesAndCount } from './helpFunctions';
 export class HomeComponent implements OnInit {
 
 tvSeries: object;
-
+selectedChips: string[];
   constructor(private tvSeriesService: TvseriesService) { }
+  selectedCategory: string;
   categoriesCountMap: Map<string, number>;
   searchQuery: string;
+
+  changeSelected(event):void{
+    console.log(event);
+    
+  }
+
   getTvSeries():void{
     this.tvSeries = this.tvSeriesService.getTvSeries();
     this.categoriesCountMap = distinctCategoriesAndCount( this.tvSeries);

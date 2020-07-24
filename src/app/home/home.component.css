@@ -6,3 +6,13 @@ input {
     display: flex;
     justify-content: center;
 }
+.example-card {
+    max-width: 200px;
+    margin: 20px;
+  }
+
+  .card-holder {
+      background-color: tomato;
+      padding: 10px 0px;
+      margin-top: 10px;
+  }
