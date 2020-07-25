@@ -7,17 +7,16 @@
 </mat-form-field>
 <mat-chip-list [multiple]="true">
   <mat-chip *ngFor="let category of categoriesCountMap | keyvalue" color="primary" #chip="matChip"
-    (click)="chip.selected=!chip.selected" (selectionChange)="changeSelected(category.key)">{{ category.key }}
+    (click)="chip.selected=!chip.selected" (selectionChange)="changeSelectedCategories(category.key)">{{ category.key }}
     ({{ category.value }})</mat-chip>
 </mat-chip-list>
 
 <div class="card-holder">
-  <mat-card class="example-card">
-    
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card *ngFor="let tvs of tvSeries"  class="example-card">
+    <img mat-card-image src="../../assets/aaa.jpg" alt="Photo of a Shiba Inu">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-title>{{ tvs.title }}</mat-card-title>
     </mat-card-header>
   </mat-card>
 </div>

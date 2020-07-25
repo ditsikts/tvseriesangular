@@ -7,8 +7,8 @@ import { tvseriesmock } from './tvseriesmock';
 
 export class TvseriesService {
 
-  getTvSeries(): object {
-    return tvseriesmock;
+  getTvSeries(search: string): object {
+    return tvseriesmock.filter(tvs => tvs.title.includes(search));
   }
   
   constructor() { }

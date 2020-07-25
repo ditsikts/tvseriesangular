@@ -9,27 +9,30 @@ import { distinctCategoriesAndCount } from './helpFunctions';
 })
 export class HomeComponent implements OnInit {
 
-tvSeries: object;
-selectedChips: string[];
-  constructor(private tvSeriesService: TvseriesService) { }
+  tvSeries: object;
+  selectedChips: string[];
   selectedCategory: string;
   categoriesCountMap: Map<string, number>;
   searchQuery: string;
 
-  changeSelected(event):void{
+  changeSelectedCategories(event): void {
     console.log(event);
-    
   }
 
-  getTvSeries():void{
-    this.tvSeries = this.tvSeriesService.getTvSeries();
-    this.categoriesCountMap = distinctCategoriesAndCount( this.tvSeries);
+  getTvSeries(search: string): void {
+    this.tvSeries = this.tvSeriesService.getTvSeries(search);
+    this.categoriesCountMap = distinctCategoriesAndCount(this.tvSeries);
   }
+
   searchChanged(event) {
-    console.log(event.target.value);
+    this.getTvSeries(event.target.value);
+    console.log(this.tvSeries);
+
   }
+
+  constructor(private tvSeriesService: TvseriesService) { }
+
   ngOnInit(): void {
-    this.getTvSeries();
   }
 
 }
