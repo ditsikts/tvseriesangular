@@ -359,7 +359,7 @@ export const tvseriesmock = [
     },
     {
       "id": 8,
-      "title": "FlashForward",
+      "title": "Flash Forward",
       "status": "Cancelled",
       "imageUrl": null,
       "seasons": [

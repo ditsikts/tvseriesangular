@@ -1,7 +1,7 @@
 <mat-form-field floatLabel="never">
   <mat-label>Search</mat-label>
   <input matInput type="text" [(ngModel)]="searchQuery" (keyup.enter)="searchChanged($event)">
-  <button mat-button *ngIf="searchQuery" matSuffix mat-icon-button aria-label="Clear" (click)="searchQuery=''">
+  <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="searchQuery=''">
     <mat-icon inline=true>close</mat-icon>
   </button>
 </mat-form-field>
@@ -11,12 +11,6 @@
     ({{ category.value }})</mat-chip>
 </mat-chip-list>
 
-<div class="card-holder">
-  <mat-card *ngFor="let tvs of tvSeries"  class="example-card">
-    <img mat-card-image src="../../assets/aaa.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{ tvs.title }}</mat-card-title>
-    </mat-card-header>
-  </mat-card>
+<div *ngIf="tvSeries">
+  <app-card-holder [tvSeries]="tvSeries"></app-card-holder>
 </div>

@@ -1,0 +1,13 @@
+.tvseries-card {
+    width: 210px;
+    margin-left: 23px;
+    margin-top: 20px;
+  }
+
+.card-holder {
+    background-color: tomato;
+    padding: 10px 0px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
