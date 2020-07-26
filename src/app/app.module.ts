@@ -10,13 +10,13 @@ import {MatCardModule} from '@angular/material/card';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { CardHolderComponent } from './card-holder/card-holder.component';
+import { CardsHolderComponent } from './cards-holder/cards-holder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CardHolderComponent
+    CardsHolderComponent
   ],
   imports: [
     BrowserModule,
