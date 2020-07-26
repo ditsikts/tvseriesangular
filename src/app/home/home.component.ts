@@ -10,14 +10,8 @@ import { distinctCategoriesAndCount } from './helpFunctions';
 export class HomeComponent implements OnInit {
 
   tvSeries: object;
-  selectedChips: string[];
-  selectedCategory: string;
   categoriesCountMap: Map<string, number>;
   searchQuery: string;
-
-  changeSelectedCategories(event): void {
-    console.log(event);
-  }
 
   getTvSeries(search: string): void {
     this.tvSeries = this.tvSeriesService.getTvSeries(search);
@@ -26,8 +20,12 @@ export class HomeComponent implements OnInit {
 
   searchChanged(event) {
     this.getTvSeries(event.target.value);
-    console.log(this.tvSeries);
+    // console.log(this.tvSeries);
+  }
 
+  categoriesSelectedHandler(selectedCategoriesOut: Set<string>){
+    console.log(selectedCategoriesOut);
+    
   }
 
   constructor(private tvSeriesService: TvseriesService) { }

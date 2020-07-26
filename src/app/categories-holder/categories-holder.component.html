@@ -1,0 +1,5 @@
+<mat-chip-list [multiple]="true">
+    <mat-chip *ngFor="let category of categoriesCountMap | keyvalue" color="primary" #chip="matChip"
+      (click)="chip.selected=!chip.selected" (selectionChange)="changeSelectedCategories(category.key)">{{ category.key }}
+      ({{ category.value }})</mat-chip>
+  </mat-chip-list>

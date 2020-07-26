@@ -11,12 +11,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { CardsHolderComponent } from './cards-holder/cards-holder.component';
+import { CategoriesHolderComponent } from './categories-holder/categories-holder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CardsHolderComponent
+    CardsHolderComponent,
+    CategoriesHolderComponent
   ],
   imports: [
     BrowserModule,

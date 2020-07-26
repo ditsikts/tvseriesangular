@@ -5,11 +5,10 @@
     <mat-icon inline=true>close</mat-icon>
   </button>
 </mat-form-field>
-<mat-chip-list [multiple]="true">
-  <mat-chip *ngFor="let category of categoriesCountMap | keyvalue" color="primary" #chip="matChip"
-    (click)="chip.selected=!chip.selected" (selectionChange)="changeSelectedCategories(category.key)">{{ category.key }}
-    ({{ category.value }})</mat-chip>
-</mat-chip-list>
+
+<div *ngIf="categoriesCountMap">
+  <app-categories-holder (categoriesSelectedEmit)="categoriesSelectedHandler($event)" [categoriesCountMap]="categoriesCountMap"></app-categories-holder>
+</div>
 
 <div *ngIf="tvSeries">
   <app-cards-holder [tvSeries]="tvSeries"></app-cards-holder>
