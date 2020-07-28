@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { CardsHolderComponent } from './cards-holder/cards-holder.component';
 import { CategoriesHolderComponent } from './categories-holder/categories-holder.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CategoriesHolderComponent } from './categories-holder/categories-holder
     MatIconModule,
     MatButtonModule,
     MatChipsModule,
-    MatCardModule
+    MatCardModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
