@@ -13,13 +13,15 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { CardsHolderComponent } from './cards-holder/cards-holder.component';
 import { CategoriesHolderComponent } from './categories-holder/categories-holder.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CardsHolderComponent,
-    CategoriesHolderComponent
+    CategoriesHolderComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

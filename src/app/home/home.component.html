@@ -1,11 +1,3 @@
-<mat-form-field floatLabel="never">
-  <mat-label>Search</mat-label>
-  <input matInput type="text" [(ngModel)]="searchQuery" (keyup.enter)="searchChanged($event)">
-  <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="searchQuery=''">
-    <mat-icon inline=true>close</mat-icon>
-  </button>
-</mat-form-field>
-
 <div *ngIf="categoriesCountMap">
   <app-categories-holder (categoriesSelectedEmit)="categoriesSelectedHandler($event)" [categoriesCountMap]="categoriesCountMap"></app-categories-holder>
 </div>
