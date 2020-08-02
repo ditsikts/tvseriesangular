@@ -2,7 +2,7 @@ export const tvseriesmock = [
     {
       "id": 1,
       "title": "Breaking Bad",
-      "status": "Ended",
+      "status": "Finished",
       "imageUrl": null,
       "seasons": [
         {
@@ -88,7 +88,7 @@ export const tvseriesmock = [
     {
       "id": 3,
       "title": "Game of Thrones",
-      "status": "Ended",
+      "status": "Finished",
       "imageUrl": null,
       "seasons": [
         {
@@ -158,7 +158,7 @@ export const tvseriesmock = [
     {
       "id": 4,
       "title": "Stranger Things",
-      "status": "Ended",
+      "status": "Ongoing",
       "imageUrl": null,
       "seasons": [
         {
@@ -198,7 +198,7 @@ export const tvseriesmock = [
     {
       "id": 5,
       "title": "Sherlock",
-      "status": "Ended",
+      "status": "Finished",
       "imageUrl": null,
       "seasons": [
         {
@@ -250,7 +250,7 @@ export const tvseriesmock = [
     {
       "id": 6,
       "title": "Dexter",
-      "status": "Ended",
+      "status": "Finished",
       "imageUrl": null,
       "seasons": [
         {
@@ -320,7 +320,7 @@ export const tvseriesmock = [
     {
       "id": 7,
       "title": "Fargo",
-      "status": "Ended",
+      "status": "Finished",
       "imageUrl": null,
       "seasons": [
         {
