@@ -10,15 +10,16 @@ export class TvSeries {
     seasons: Season[];
     categories: Category[];
 
-    constructor(jsObj: any) {
-        this.id = jsObj.id;
-        this.title = jsObj.title;
-        this.status = jsObj.status;
-        this.seasons = jsObj.seasons;
-        this.categories = jsObj.categories;
-    }
+    constructor() {}
 
-    getSmth():string{
-        return "smth";
+    public static deserialize(jsObj: any): TvSeries{
+        let tvs : TvSeries = new TvSeries();
+        
+        tvs.id = jsObj.id;
+        tvs.title = jsObj.title;
+        tvs.status = jsObj.status;
+        tvs.categories = jsObj.categories.map(cat => new Category(cat));
+        tvs.seasons = jsObj.categories.map(seas => new Season(seas));
+        return tvs;
     }
 }

@@ -15,11 +15,10 @@ export class TvseriesService {
   }
 
   constructor() {
-    
-let cat: Category = new Category(tvseriesmock[0].categories[0]);
-console.log(cat);
-let se: Season = new Season(tvseriesmock[0].seasons[0]);
-console.log(se);
 
+console.log(tvseriesmock[0]);
+
+    let tv: TvSeries[] = tvseriesmock.map(tvs=> TvSeries.deserialize(tvs)) ;
+    console.log(tv);
   }
 }
