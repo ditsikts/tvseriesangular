@@ -14,6 +14,7 @@ import { CardsHolderComponent } from './cards-holder/cards-holder.component';
 import { CategoriesHolderComponent } from './categories-holder/categories-holder.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SearchComponent } from './search/search.component';
+import { ShowComponent } from './show/show.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SearchComponent } from './search/search.component';
     HomeComponent,
     CardsHolderComponent,
     CategoriesHolderComponent,
-    SearchComponent
+    SearchComponent,
+    ShowComponent
   ],
   imports: [
     BrowserModule,

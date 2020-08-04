@@ -10,15 +10,17 @@ import { Season } from './models/Season';
 
 export class TvseriesService {
 
-  getTvSeries(search: string): object {
-    return tvseriesmock.filter(tvs => tvs.title.includes(search));
+  tvseries : TvSeries[];
+
+  getTvSeries(search: string): TvSeries[] {
+    return this.tvseries.filter(tvs => tvs.title.includes(search));
+  }
+
+  findById(id: number): TvSeries {
+    return this.tvseries.filter(tvs => tvs.id === id)[0];
   }
 
   constructor() {
-
-console.log(tvseriesmock[0]);
-
-    let tv: TvSeries[] = tvseriesmock.map(tvs=> TvSeries.deserialize(tvs)) ;
-    console.log(tv);
+    this.tvseries = tvseriesmock.map(tvs=> TvSeries.deserialize(tvs));
   }
 }
