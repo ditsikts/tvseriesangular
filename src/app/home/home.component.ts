@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { TvseriesService } from '../tvseries.service';
 import { distinctCategoriesAndCount } from './helpFunctions';
 import { ActivatedRoute } from '@angular/router';
+import { TvSeries } from '../models/TvSeries';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 
 export class HomeComponent implements OnInit {
 
-  tvSeries: object;
+  tvSeries: TvSeries[];
   categoriesCountMap: Map<string, number>;
   searchQuery: string;
 

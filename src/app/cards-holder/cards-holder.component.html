@@ -1,5 +1,5 @@
 <div *ngIf="tvSeries" class="card-holder">
-    <mat-card *ngFor="let tvs of tvSeries" class="tvseries-card">
+    <mat-card *ngFor="let tvs of tvSeries" class="tvseries-card" routerLink="/tvseries/show/{{tvs.id}}">
         <img mat-card-image src="../../assets/aaa.jpg" alt="Movie Poster">
         <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
